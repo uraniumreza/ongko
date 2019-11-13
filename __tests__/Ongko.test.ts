@@ -1,5 +1,13 @@
-import { Ongko } from "../src/index";
+import { getBanglaNumber } from "../src/index";
 
-test("Ongko", () => {
-  expect(Ongko("142")).toBe("I will take care of you 142");
+describe("GetBanglaNumber", () => {
+  it("should get bangla number when passes english number", () => {
+    expect(getBanglaNumber(1287125)).toBe("১২৮৭১২৫");
+  });
+  it("should get bangla number when passes english number as string", () => {
+    expect(getBanglaNumber("1287125")).toBe("১২৮৭১২৫");
+  });
+  it("should throw an error when passes non-digit values in string", () => {
+    expect(() => getBanglaNumber("1234e54")).toThrow();
+  });
 });
