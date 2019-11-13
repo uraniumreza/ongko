@@ -1,0 +1,59 @@
+{
+  "name": "ongko",
+  "version": "0.0.1",
+  "description": "A typescript library to help you converting English numerical values to Bangla in different formats!",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uraniumreza/ongko.git"
+  },
+  "keywords": [
+    "Bangla",
+    "Numbers",
+    "TypeScript"
+  ],
+  "author": "Nayeem Reza <reza.uranium@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uraniumreza/ongko/issues"
+  },
+  "homepage": "https://github.com/uraniumreza/ongko#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "npm run lint",
+      "npm run format",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
