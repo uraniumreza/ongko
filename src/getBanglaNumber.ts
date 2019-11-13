@@ -4,7 +4,7 @@ interface NumberMap {
   [index: string]: string;
 }
 
-const englishTobangla: NumberMap = {
+const englishToBangla: NumberMap = {
   0: '০',
   1: '১',
   2: '২',
@@ -17,12 +17,20 @@ const englishTobangla: NumberMap = {
   9: '৯',
 };
 
-export const getBanglaNumber = (englishNumber: string | number) => {
-  const englishNumberStr: string = typeof englishNumber === 'string' ? englishNumber : englishNumber.toString();
+const getBanglaNumber = (englishNumber: string | number) => {
+  const englishNumberStr: string =
+    typeof englishNumber === 'string'
+      ? englishNumber
+      : englishNumber.toString();
 
   if (!isNumber(englishNumberStr)) {
     throw new Error('Input should contain only digits!');
   }
 
-  return englishNumberStr.replace(/\d/g, (matched: string): string => englishTobangla[matched]);
+  return englishNumberStr.replace(
+    /\d/g,
+    (matched: string): string => englishToBangla[matched],
+  );
 };
+
+export default getBanglaNumber;

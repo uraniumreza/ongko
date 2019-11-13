@@ -1,3 +1,7 @@
-export const Ongko = (input: string) => `I will take care of you ${input}`;
+import getBanglaNumber from './getBanglaNumber';
 
-export * from './getBanglaNumber';
+const Ongko = {
+  getBanglaNumber,
+};
+
+export default Ongko;
