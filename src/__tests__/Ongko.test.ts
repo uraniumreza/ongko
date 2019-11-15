@@ -26,7 +26,7 @@ describe('GetBanglaNumber', () => {
     expect(Ongko.getBanglaNumber(-5.125)).toBe('-৫.১২৫');
   });
   test("when passes '12,87,125'", () => {
-    expect(Ongko.getBanglaNumber('12,87,125')).toBe('১২,৮৭,১২৫');
+    expect(() => Ongko.getBanglaNumber('12,87,125')).toThrow();
   });
   test("when passes '1234e54'", () => {
     expect(() => Ongko.getBanglaNumber('1234e54')).toThrow();
@@ -35,7 +35,3 @@ describe('GetBanglaNumber', () => {
     expect(() => Ongko.getBanglaNumber('12.34.54')).toThrow();
   });
 });
-
-// TODO
-// 10 ^ 5
-// 10 ^ -5
