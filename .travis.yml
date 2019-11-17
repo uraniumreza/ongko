@@ -1,17 +1,16 @@
 language: node_js
 node_js:
-  - stable
+- stable
 install:
-  - npm install
+- npm install
 script:
-  - npm test
+- npm test
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
+  api_key:
+    secure: dXxpfRFdv8GZDcoj0Im8YIpwcP7RIpD8ta6U6bTmV2pVUzPbGGcDueS+Ud8Xrf4dzIZzD88T4B4ouBuJy0QOgA5M5N/7OEzNvX9EGAFP2O0DEtGldcIDeHONsxxnJqrLVEiGPYFBTyfF77K/qn3L0t3O5JA5P3iVYvYljIEI4eki+ggenA9PuQbipYrPtpS7teg2jnfg/9JgtBuINbS3fTWk6gCFpBjD3K4/heH0JmFDQOPQzRWnocQsAQXyja6ThyJM3BNBU/aNflCbI/0TO58ZmqTeUNFjlKogJCrvu7lKWpnxX6D1CsQLJnIXc35x2vyoGHujuBG9D1iXyDVHCEM5hng0HsOdo15WZwDJfRzCS+AhI6vYx91QXKYK44ny21rWPHp4j4QF+Dcg9r4LunPe0n3s5WYSHj4TM5h3fZ8IM45pBiy9hpT+AyGPbI74gFj004NLnx1If3LEeqYuChLVEwWrVzShw15nIKzdIPk8TX2vH1EqOsODDKieBSQKVSMEBsZc+pOaZbSneWc+KshxHZSyc/6aRJItM5AlchXbpXDhV/gQLmmKqIIyIhL+zvGA5HM+/z+RhfWpvyHwZOOiOAgQVmkkb2gulr5WVyYDdqi88xl40wUfH72N7C5DQDUYDUfGVm3C4OeXCxvn17W9W44WTy8dfQmR49pwSiA=
   on:
     tags: true
     repo: uraniumreza/ongko
-    branches:
-      only:
-        - master
+    branch: master
