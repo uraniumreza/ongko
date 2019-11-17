@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- stable
+  - stable
 install:
-- npm install
+  - npm install
 script:
-- npm test
+  - npm test
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
-  api_key:
-    secure: NqkwDSurPmX6OP3p3qpSjfOQP8yhPiBxnSR40b9+MsAKLtGmlRGYxRpS/2Mh79mCgI/eOymPXRiFZ5JseAIF6tr/L33ArhmfPvmCw5NUIlsyuf3Gxprc3LMTEYubQ/PK9JiwjVaalxrUq/ZFuwyIeYIV5t0tFo3+bbunLD+2bVh3w3m180o/Zp8kNNnYxm33YDSvn50QW+tkmrGfZ1gp1buNJACdNBZMAtJxrq7MWgcHmkYpTrGiJJLACy14cU5PWAbyaKdKszC5tzy2J/IH2W7aRbaF5covLbnVbSPknvl9NoROOgPUNLascobdNjsnEdLdVg+mAIF1euylTr7t1LNc38qlwkhxx6PE8MHfcG1gqTcYR3H5lew18de+EPwNwK6y3nXDnNEnu4hSqvHsSALvhDhRJpxM1upUho75uBfzFM8HgdwWGkw/OUmzm2H9bLhCttQEv9TLSvFDin9kfewLFHMopz+NcLmRVibto8i+QU7QoI1dwqZKqNkkCH/ZaA5HMver5qlzCa7ZIfOssulUJ97bYV6P9u139IQb4XqSgAVJ9nlQ1GrAejOUV4+zTkX6uWK0DVa9H3aHEUTn/0HKg6DuCRio7DvFIIXk6MzpHSRvz4B2lGVWorZ9v3+q1IH8E/7BHRaRFJMXjz5v+QaZLB0L+apsEZxSG/KMMPU=
+  api_token:
+    secure: fgZApJHSwxZt5uxLnv+mOD9NqLtZSafmwwZFhpRIb/Xr6KUBstdxjMHaaWAwkHNEhkXFWWyHqqM6Ztzqi319yZ2S3a7mcSXeg2RSxfDS0G9uHu7YYbUSO7xuMQR/X9/BCe/9lOx5LhwEXuT7qfHyteHuZcZThCmvMC2A4lCWm2iJip+aFQMPieptLXH/oQt1UEBe7etSZClBOPJLDuwAi7mKoSLJLlU/6FXQm+yKDkI4IKMqcuG5YSu/M/AEuGTYWGEZaWDmSTPAQxwLe7Gzj1QHDZm7IVfVFrJcBlxibE+6uh0hc9x/JZAbuMmsMwN+epjB4SotiHNrXXW7SRyJOdMIh6oeN+J+/MumMQhe10T7mDwlFpVvih4jnC5sMLsVB9BFRFXk+bkZNGZ/AI84Uq+SWfJVeA2QZfIZpu+24FVar+N1frViXs/s3cM0u5JGdMNwMwOiWYzSlskXpJ7otutjgksXy+hhvMGQulL4KwS8BmU2NuNM6YmYWbI541xAzprFju21DQc6bSm0nDnEkAtV+E3EYWvUzZjsJR17OEl6ggyJ+R+lHRUa6ENyCg1a9dMVhwEHkIs3Qu2mTBMkatdv4q0I+rdOlnI/XpmRwx4fKc3PWmrvXhYmm8gqJp5oN7vxcOzs1RoRRrHgvy5/0TreVYZdVeZur2FUxPuKUns=
   on:
     tags: true
     repo: uraniumreza/ongko
